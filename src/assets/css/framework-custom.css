@@ -1,0 +1,233 @@
+/* _filepond.css */
+
+.filepond--root {
+  margin-bottom: 0 !important;
+}
+
+.filepond--panel-root {
+  border-bottom: 2px dashed var(--color-default-300) !important;
+  background: var(--color-card) !important;
+}
+
+.filepond--drop-label {
+  color: var(--color-body-color) !important;
+
+  .filepond--label-action {
+    font-weight: 500 !important;
+  }
+}
+
+.filepond--credits {
+  display: none !important;
+}
+
+.filepond--item-panel {
+  background-color: var(--color-primary) !important;
+}
+
+.filepond-uploader.two-grid .filepond--item {
+  width: calc(50% - 0.5em) !important;
+}
+
+.filepond-uploader.three-grid .filepond--item {
+  width: calc(33.3% - 0.5em) !important;
+}
+
+.filepond--root {
+  overflow: hidden;
+  border: 2px dashed var(--color-default-300) !important;
+
+  border-radius: 0.5em !important;
+  min-height: 70px !important;
+}
+
+.filepond-input-circle .filepond--panel-root {
+  border-radius: 50% !important;
+  border-bottom: 0 !important;
+}
+
+/* react select */
+
+.react-select {
+  > div {
+    border: 1px solid var(--color-default-300) !important;
+    background-color: var(--color-card) !important;
+
+    &:hover {
+      border: 1px solid var(--color-default-300) !important;
+    }
+  }
+}
+
+.react-select__menu {
+  background-color: var(--color-card) !important;
+}
+
+.react-select__control--is-focused {
+  border-color: var(--color-default-400) !important;
+  box-shadow: none !important;
+}
+
+.react-select__indicator-separator {
+  display: none !important;
+}
+
+.react-select__dropdown-indicator {
+  color: var(--color-default-600) !important;
+}
+
+.react-select__menu {
+  background-color: var(--color-card) !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: var(--radius) !important;
+  z-index: 1120 !important;
+}
+
+.react-select__menu-list {
+  border: 1px solid var(--color-default-300) !important;
+  border-radius: var(--radius) !important;
+}
+
+.react-select__option {
+  padding: 12px !important;
+  color: var(--color-body-color) !important;
+
+  &:hover {
+    color: var(--color-body-color) !important;
+    background-color: var(--color-default-100) !important;
+  }
+}
+
+.react-select__option--is-focused,
+.react-select__option--is-selected {
+  color: var(--color-body-color) !important;
+  background-color: var(--color-default-100) !important;
+}
+.react-select__single-value {
+  color: var(--color-default-600) !important;
+}
+.react-select__multi-value {
+  @apply !bg-primary/20 !text-primary;
+
+  .react-select__multi-value__label {
+    @apply !text-primary;
+  }
+
+  .react-select__multi-value__remove {
+    &:hover {
+      @apply !bg-primary/20 !text-primary;
+    }
+  }
+}
+
+/* react-bootstrap-typeahead style */
+
+.rbt-input input,
+.rbt-input.form-control {
+  @apply border-default-300 bg-card text-body-color placeholder:text-default-400 block h-9.5 w-full rounded-[0.3rem] border py-0 px-3 text-sm outline-0 transition-all;
+  @apply hover:border-default-500! focus:border-default-500! focus-visible:border-default-500 focus:outline-0 focus-visible:ring-0 focus-visible:outline-none;
+  @apply aria-invalid:border-danger/60 aria-invalid:ring-danger/10 placeholder:text-body-color;
+  transition-property: color, box-shadow;
+}
+
+.rbt-token {
+  @apply !bg-primary/20 !text-primary;
+
+  .rbt-token-remove-button {
+    background-color: transparent;
+    border: none;
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  }
+}
+
+.rbt-input-multi.focus {
+  box-shadow: none !important;
+  background-color: var(--color-default-100) !important;
+  border-color: var(--color-default-400) !important;
+}
+
+.rbt-menu.dropdown-menu {
+  @apply bg-card border border-solid border-default-300 z-30 mt-2;
+  @apply rounded text-wrap p-1 shadow transition-all;
+  @apply space-y-1;
+  transition-property: opacity, margin;
+}
+
+/* Theme Setting Btn */
+.btn-theme-setting {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset-inline-end: 4px;
+        top: 16px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: var(--color-danger);
+        transform: translateY(-50%);
+        animation: blinkDot 1.2s infinite ease-in-out;
+        z-index: 5;
+    }
+
+    span {
+      @apply size-[1em] flex items-center justify-center animate-[spin_2s_linear_infinite];
+
+      svg {
+          @apply  flex;
+      }
+    }
+}
+
+/* _widgets.css */
+
+
+/* Card Calendar */
+.card-calendar-widget {
+    +.flatpickr-calendar {
+        display: block;
+        width: 100%;
+        box-shadow: none;
+        border-style: dashed;
+
+        .flatpickr-months {
+            margin-top: 10px;
+
+            .flatpickr-prev-month,
+            .flatpickr-next-month {
+                top: 10px;
+            }
+
+            .flatpickr-prev-month {
+                @apply start-2.5;
+            }
+
+            .flatpickr-next-month {
+                @apply end-2.5;
+            }
+        }
+    }
+}
+
+/* Flatpicker */
+.flatpickr-inline-custom  {
+  display: none;
+}
+
+/* Jvector Map */
+.jvm-zoom-btn {
+  padding: 0;
+}
