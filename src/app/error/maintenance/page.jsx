@@ -1,5 +1,4 @@
 import authCard from '@/assets/images/auth-card-bg.svg'
-import maintenanceSvg from '@/assets/images/svg/maintenance.svg'
 import AuthLogo from '@/components/AuthLogo'
 import { currentYear, META_DATA } from '@/config/constants'
 import Image from 'next/image'
@@ -26,7 +25,6 @@ const Page = () => {
                 </div>
 
                 <div className="p-3 text-center">
-                  <Image src={maintenanceSvg} alt="Maintenance" className="mx-auto md:size-64" />
                   <h3 className="mb-2 text-xl font-bold uppercase">Site Under Maintenance</h3>
                   <p className="text-default-400">
                     We’re currently performing scheduled maintenance.
