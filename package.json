@@ -2,9 +2,9 @@
   "name": "paces",
   "version": "1.2.0",
   "description": "Paces is a modern, responsive admin dashboard available on ThemeForest. Ideal for building CRM, CMS, project management tools, and custom web applications with a clean UI, flexible layouts, and rich features.",
-  "author": "Coderthemes",
+  "author": "Tarique",
   "scripts": {
-    "dev": "next dev -p 3001",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
