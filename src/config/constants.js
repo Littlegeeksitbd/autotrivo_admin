@@ -9,3 +9,4 @@ export const META_DATA = {
 }
 export const currentYear = new Date().getFullYear()
 export const currency = '$'
+

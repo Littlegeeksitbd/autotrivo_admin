@@ -1,12 +1,22 @@
 const nextConfig = {
-  redirects: async () => {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.qrserver.com",
+      },
+    ],
+  },
+
+  async redirects() {
     return [
       {
-        source: '/',
-        destination: '/dashboard/ecommerce',
+        source: "/",
+        destination: "/dashboard/ecommerce",
         permanent: false,
       },
-    ]
+    ];
   },
-}
-export default nextConfig
+};
+
+export default nextConfig;

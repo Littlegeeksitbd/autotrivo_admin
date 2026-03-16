@@ -17,7 +17,7 @@ export default function SSOLogin() {
 
     const verifyUser = async () => {
       try {
-        const res = await axios.get(`${API_URL}/api/me`, {
+        const res = await axios.get(`${API_URL}/api/auth/me`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 
